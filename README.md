@@ -1,4 +1,4 @@
-# nonprofit-seeding-neural-network
+# nonprofit-seeding-deep-learning
 This project leverages machine learning, deep learning and neural network principles to aid a nonprofit foundation in creating a tool that can select applicants for funding who have the best chance of success in their ventures. We use the features of a dataset provided by the organization to create a binary classifier that can predict whether applicants will be successful if funded. Specifically, we make use of TensorFlow, Keras and Google Colab to implement deep learning techniques that can help us produce a sufficiently accurate predictive tool.
 
 Our starting point is a CSV containing more than 34,000 organizations that have received funding from Alphabet Soup over the years, delivered by the organization's business evaluation team. The dataset features columns that capture metadata about each organization, such as:

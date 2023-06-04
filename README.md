@@ -1,4 +1,6 @@
 # nonprofit-seeding-deep-learning
+
+## Overview
 This project leverages machine learning, deep learning and neural network principles to aid a nonprofit foundation in creating a tool that can select applicants for funding who have the best chance of success in their ventures. We use the features of a dataset provided by the organization to create a binary classifier that can predict whether applicants will be successful if funded. Specifically, we make use of TensorFlow, Keras and Google Colab to implement deep learning techniques that can help us produce a sufficiently accurate predictive tool.
 
 Our starting point is a CSV containing more than 34,000 organizations that have received funding from Alphabet Soup over the years, delivered by the organization's business evaluation team. The dataset features columns that capture metadata about each organization, such as:
@@ -16,7 +18,7 @@ Our starting point is a CSV containing more than 34,000 organizations that have 
 
 ## Procedure
 
-#### Preprocess the Data
+### Preprocess the Data
 Preprocess using `Pandas` and `scikit-learn`’s `StandardScaler()`. Preprocessing and v1 model archtecture/training was conducted in Google Colab.
 - Read in the charity_data.csv to a Pandas DataFrame, and be sure to identify the following in your dataset:
 - Drop the unuseful `EIN` and `NAME` columns.
@@ -27,7 +29,7 @@ Preprocess using `Pandas` and `scikit-learn`’s `StandardScaler()`. Preprocessi
 - Split the preprocessed data into a features array, X, and a target array, y. Use these arrays and the `.train_test_split()` function to split the data into training and testing datasets.
 - Scale the training and testing features datasets by instantiating a `StandardScaler`, fitting it to the training data, and using the `.transform()` function.
 
-#### Compile, Train, and Evaluate the Model
+### Compile, Train, and Evaluate the Model
 - Design a deep learning model to create a binary classification model that can predict if a firm-funded organization will be successful based on the features of the provided dataset.
     - Create a neural network model by assigning the number of input features and nodes for each layer using TensorFlow and Keras.
     - Create the first hidden layer and choose an appropriate activation function.
@@ -49,56 +51,25 @@ Preprocess using `Pandas` and `scikit-learn`’s `StandardScaler()`. Preprocessi
 
 - Save and export results to an HDF5 file called `AlphabetSoupCharity.h5`.
 
+
+**- Compiling, Training and Evaluating**
+    - How many neurons, layers, and activation functions did you select for your neural network model, and why?
+    - Were you able to achieve the target model performance?
+    - What steps did you take in your attempts to increase model performance?
+
 #### Optimize the Model
-Using your knowledge of TensorFlow, optimize your model to achieve a target predictive accuracy higher than 75%.
+Our goal here is to optimize our model to achieve a target predictive accuracy higher than 75%.
+- Create a new file, `AlphabetSoup_Optimization` with the same structure as our v1 model archtecture.
+- Design a new deep learning model with modifications that will optimize to achieve higher than 75% accuracy:
+    - Preprocessing
+        - Less aggressive binning to account for underfitting
+    - Archtecture
+        - Change activation functions in hidden layers
+    - Training
+        - Reduce to 100 epochs for the training regimen
 
-Use any or all of the following methods to optimize your model:
 
-Adjust the input data to ensure that no variables or outliers are causing confusion in the model, such as:
-Dropping more or fewer columns.
-Creating more bins for rare occurrences in columns.
-Increasing or decreasing the number of values for each bin.
-Add more neurons to a hidden layer.
-Add more hidden layers.
-Use different activation functions for the hidden layers.
-Add or reduce the number of epochs to the training regimen.
-Note: If you make at least three attempts at optimizing your model, you will not lose points if your model does not achieve target performance.
+### Summary
 
-Create a new Google Colab file and name it AlphabetSoupCharity_Optimization.ipynb.
-
-Import your dependencies and read in the charity_data.csv to a Pandas DataFrame.
-
-Preprocess the dataset as you did in Step 1. Be sure to adjust for any modifications that came out of optimizing the model.
-
-Design a neural network model, and be sure to adjust for modifications that will optimize the model to achieve higher than 75% accuracy.
-
-Save and export your results to an HDF5 file. Name the file AlphabetSoupCharity_Optimization.h5.
-
-Step 4: Write a Report on the Neural Network Model
-For this part of the assignment, you’ll write a report on the performance of the deep learning model you created for Alphabet Soup.
-
-The report should contain the following:
-
-Overview of the analysis: Explain the purpose of this analysis.
-
-Results: Using bulleted lists and images to support your answers, address the following questions:
-
-Data Preprocessing
-
-What variable(s) are the target(s) for your model?
-What variable(s) are the features for your model?
-What variable(s) should be removed from the input data because they are neither targets nor features?
-Compiling, Training, and Evaluating the Model
-
-How many neurons, layers, and activation functions did you select for your neural network model, and why?
-Were you able to achieve the target model performance?
-What steps did you take in your attempts to increase model performance?
-Summary: Summarize the overall results of the deep learning model. Include a recommendation for how a different model could solve this classification problem, and then explain your recommendation.
-Step 5: Copy Files Into Your Repository
-Now that you're finished with your analysis in Google Colab, you need to get your files into your repository for final submission.
-
-Download your Colab notebooks to your computer.
-
-Move them into your Deep Learning Challenge directory in your local repository.
-
-Push the added files to GitHub.
+- Summarize the overall results of the deep learning model.
+- Include a recommendation for how a different model could solve this classification problem, and then explain your recommendation.x

@@ -72,7 +72,7 @@ Our goal here is to optimize our model to achieve a target predictive accuracy h
 
 - Architecture
 
-    ![v2 Model Architecture](images/model_v2_architecture.png)
+    ![v2 Model Architecture](images/model_v2_architecture.png.png)
     
 - Training
 

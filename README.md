@@ -63,13 +63,18 @@ Our goal here is to optimize our model to achieve a target predictive accuracy h
 - Design a new deep learning model with modifications that will optimize to achieve higher than 75% accuracy:
     - Preprocessing
         - Less aggressive binning to account for underfitting
+        - Add the `NAME` column back into the dataframe before training
     - Archtecture
         - Change activation functions in hidden layers
+        - Reduce number of hidden layers to 1
     - Training
         - Reduce to 100 epochs for the training regimen
 
 
 ### Summary
 
-- Summarize the overall results of the deep learning model.
-- Include a recommendation for how a different model could solve this classification problem, and then explain your recommendation.x
+The optimized version of our deep learning model has the following performance characteristics:
+    - _Loss_: 0.447280615568161
+    - _Accuracy_: 0.7807580232620239
+
+This may be an acceptable level of performance if the Alphabet Soup organization wishes simply to have an automated recommendation system to push applications to human reviwers. If, however, it wishes to fully automate its grant application process, we may need to pursue another model. It may be worth exploring the idea of changing activation functions as well as the architecture of the neural network. For instance, it may be worth exploring recurrent layers, normalization layers, regularizations or other architectural tweaks to determine whether the model could be significantly improved.

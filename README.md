@@ -70,6 +70,20 @@ Our goal here is to optimize our model to achieve a target predictive accuracy h
     - Training
         - Reduce to 100 epochs for the training regimen
 
+- Architecture
+
+    ![v2 Model Architecture](images/model_v2_architecture.png)
+    
+- Training
+
+    ![v2 Model Training](images/model_v2_training.png)
+
+- Evaluate the model using the test data to determine the loss and accuracy.
+    - _Loss_: 0.447280615568161
+    - _Accuracy_: 0.7807580232620239
+
+    ![v2 Model Accuracy](images/accuracy_v2.png)
+
 
 ### Summary
 
